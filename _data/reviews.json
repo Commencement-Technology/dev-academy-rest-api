@@ -1,66 +1,66 @@
 [
-	{
-		"_id": "5d7a514b5d2c12c7449be020",
-		"title": "Learned a ton!",
-		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra feugiat mauris id viverra. Duis luctus ex sed facilisis ultrices. Curabitur scelerisque bibendum ligula, quis condimentum libero fermentum in. Aenean erat erat, aliquam in purus a, rhoncus hendrerit tellus. Donec accumsan justo in felis consequat sollicitudin. Fusce luctus mattis nunc vitae maximus. Curabitur semper felis eu magna laoreet scelerisque",
-		"rating": "8",
-		"bootcamp": "5d713995b721c3bb38c1f5d0",
-		"user": "5c8a1d5b0190b214360dc033"
-	},
-	{
-		"_id": "5d7a514b5d2c12c7449be021",
-		"title": "Great bootcamp",
-		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra feugiat mauris id viverra. Duis luctus ex sed facilisis ultrices. Curabitur scelerisque bibendum ligula, quis condimentum libero fermentum in. Aenean erat erat, aliquam in purus a, rhoncus hendrerit tellus. Donec accumsan justo in felis consequat sollicitudin. Fusce luctus mattis nunc vitae maximus. Curabitur semper felis eu magna laoreet scelerisque",
-		"rating": "10",
-		"bootcamp": "5d713995b721c3bb38c1f5d0",
-		"user": "5c8a1d5b0190b214360dc034"
-	},
-	{
-		"_id": "5d7a514b5d2c12c7449be022",
-		"title": "Got me a developer job",
-		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra feugiat mauris id viverra. Duis luctus ex sed facilisis ultrices. Curabitur scelerisque bibendum ligula, quis condimentum libero fermentum in. Aenean erat erat, aliquam in purus a, rhoncus hendrerit tellus. Donec accumsan justo in felis consequat sollicitudin. Fusce luctus mattis nunc vitae maximus. Curabitur semper felis eu magna laoreet scelerisque",
-		"rating": "7",
-		"bootcamp": "5d713a66ec8f2b88b8f830b8",
-		"user": "5c8a1d5b0190b214360dc035"
-	},
-	{
-		"_id": "5d7a514b5d2c12c7449be023",
-		"title": "Not that great",
-		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra feugiat mauris id viverra. Duis luctus ex sed facilisis ultrices. Curabitur scelerisque bibendum ligula, quis condimentum libero fermentum in. Aenean erat erat, aliquam in purus a, rhoncus hendrerit tellus. Donec accumsan justo in felis consequat sollicitudin. Fusce luctus mattis nunc vitae maximus. Curabitur semper felis eu magna laoreet scelerisque",
-		"rating": "4",
-		"bootcamp": "5d713a66ec8f2b88b8f830b8",
-		"user": "5c8a1d5b0190b214360dc036"
-	},
-	{
-		"_id": "5d7a514b5d2c12c7449be024",
-		"title": "Great overall experience",
-		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra feugiat mauris id viverra. Duis luctus ex sed facilisis ultrices. Curabitur scelerisque bibendum ligula, quis condimentum libero fermentum in. Aenean erat erat, aliquam in purus a, rhoncus hendrerit tellus. Donec accumsan justo in felis consequat sollicitudin. Fusce luctus mattis nunc vitae maximus. Curabitur semper felis eu magna laoreet scelerisque",
-		"rating": "7",
-		"bootcamp": "5d725a037b292f5f8ceff787",
-		"user": "5c8a1d5b0190b214360dc037"
-	},
-	{
-		"_id": "5d7a514b5d2c12c7449be025",
-		"title": "Not worth the money",
-		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra feugiat mauris id viverra. Duis luctus ex sed facilisis ultrices. Curabitur scelerisque bibendum ligula, quis condimentum libero fermentum in. Aenean erat erat, aliquam in purus a, rhoncus hendrerit tellus. Donec accumsan justo in felis consequat sollicitudin. Fusce luctus mattis nunc vitae maximus. Curabitur semper felis eu magna laoreet scelerisque",
-		"rating": "5",
-		"bootcamp": "5d725a037b292f5f8ceff787",
-		"user": "5c8a1d5b0190b214360dc038"
-	},
-	{
-		"_id": "5d7a514b5d2c12c7449be026",
-		"title": "Best instructors",
-		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra feugiat mauris id viverra. Duis luctus ex sed facilisis ultrices. Curabitur scelerisque bibendum ligula, quis condimentum libero fermentum in. Aenean erat erat, aliquam in purus a, rhoncus hendrerit tellus. Donec accumsan justo in felis consequat sollicitudin. Fusce luctus mattis nunc vitae maximus. Curabitur semper felis eu magna laoreet scelerisque",
-		"rating": "10",
-		"bootcamp": "5d725a1b7b292f5f8ceff788",
-		"user": "5c8a1d5b0190b214360dc039"
-	},
-	{
-		"_id": "5d7a514b5d2c12c7449be027",
-		"title": "Was worth the investment",
-		"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra feugiat mauris id viverra. Duis luctus ex sed facilisis ultrices. Curabitur scelerisque bibendum ligula, quis condimentum libero fermentum in. Aenean erat erat, aliquam in purus a, rhoncus hendrerit tellus. Donec accumsan justo in felis consequat sollicitudin. Fusce luctus mattis nunc vitae maximus. Curabitur semper felis eu magna laoreet scelerisque",
-		"rating": "7",
-		"bootcamp": "5d725a1b7b292f5f8ceff788",
-		"user": "5c8a1d5b0190b214360dc040"
-	}
+  {
+    "_id": "5d7a514b5d2c12c7449be020",
+    "title": "Incredible learning experience!",
+    "text": "This bootcamp exceeded my expectations. The curriculum was challenging, but it pushed me to learn quickly. I particularly loved the hands-on projects, which really helped solidify my understanding. The instructors were always available for help and genuinely cared about our success. Highly recommend for anyone serious about coding!",
+    "rating": "8",
+    "bootcamp": "5d713995b721c3bb38c1f5d0",
+    "user": "5c8a1d5b0190b214360dc033"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be021",
+    "title": "Challenging but rewarding",
+    "text": "This bootcamp was an intense but rewarding experience. The pace was fast, but the support from the instructors was incredible. I loved the peer-to-peer learning environment, and the projects were extremely practical for real-world development. I'd recommend it to anyone wanting to jumpstart their tech career.",
+    "rating": "10",
+    "bootcamp": "5d713995b721c3bb38c1f5d0",
+    "user": "5c8a1d5b0190b214360dc034"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be022",
+    "title": "Helped me land my first job",
+    "text": "After completing this bootcamp, I landed a junior developer position within a month. The bootcamp did a fantastic job of covering all the essential skills and even helped with resume building and interview prep. It was the jumpstart I needed for my career.",
+    "rating": "7",
+    "bootcamp": "5d713a66ec8f2b88b8f830b8",
+    "user": "5c8a1d5b0190b214360dc035"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be023",
+    "title": "Disappointing experience",
+    "text": "I had high hopes for this bootcamp, but it didn't quite meet my expectations. The content was outdated in some places, and the projects felt rushed. While I learned some valuable skills, I feel there are better options out there for the price.",
+    "rating": "4",
+    "bootcamp": "5d713a66ec8f2b88b8f830b8",
+    "user": "5c8a1d5b0190b214360dc036"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be024",
+    "title": "Solid bootcamp but could be better",
+    "text": "I had an overall positive experience with this bootcamp. The instructors were knowledgeable, and the projects were engaging. However, there were a few times when I felt lost and wished there was more support for beginners. Still, it was a great learning experience, and I came out with solid skills.",
+    "rating": "7",
+    "bootcamp": "5d725a037b292f5f8ceff787",
+    "user": "5c8a1d5b0190b214360dc037"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be025",
+    "title": "Not worth the cost",
+    "text": "For the price, I expected a lot more from this bootcamp. The content felt basic, and the instructors were not as involved as I had hoped. I didn’t get as much out of it as I wanted, and I’m not sure it was worth the investment.",
+    "rating": "5",
+    "bootcamp": "5d725a037b292f5f8ceff787",
+    "user": "5c8a1d5b0190b214360dc038"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be026",
+    "title": "Amazing instructors, great content",
+    "text": "The instructors at this bootcamp were by far the best part of the experience. They were patient, knowledgeable, and always willing to help. The projects were challenging, but with their guidance, I was able to tackle them confidently. Definitely worth every penny!",
+    "rating": "10",
+    "bootcamp": "5d725a1b7b292f5f8ceff788",
+    "user": "5c8a1d5b0190b214360dc039"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be027",
+    "title": "Worth the investment",
+    "text": "This bootcamp was expensive, but in the end, I feel it was worth the investment. The projects were directly applicable to real-world jobs, and the career services were excellent. I was able to secure a role soon after graduation, and I feel well-prepared for the tech industry.",
+    "rating": "7",
+    "bootcamp": "5d725a1b7b292f5f8ceff788",
+    "user": "5c8a1d5b0190b214360dc040"
+  }
 ]
