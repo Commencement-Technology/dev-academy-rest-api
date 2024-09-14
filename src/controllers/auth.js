@@ -10,7 +10,6 @@ const User = require("../models/User");
 exports.register = asyncHandler(async (req, res, next) => {
   const { name, email, password, role } = req.body;
 
-  // Create user
   const user = await User.create({
     name,
     email,
@@ -81,8 +80,8 @@ exports.getMe = asyncHandler(async (req, res, next) => {
 // @access    Private
 exports.updateDetails = asyncHandler(async (req, res, next) => {
   const fieldsToUpdate = {
-    name: req.body.name,
-    email: req.body.email,
+    ...(req.body.name && { name: req.body.name }),
+    ...(req.body.email && { email: req.body.email }),
   };
 
   const user = await User.findByIdAndUpdate(req.user.id, fieldsToUpdate, {
@@ -102,7 +101,6 @@ exports.updateDetails = asyncHandler(async (req, res, next) => {
 exports.updatePassword = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.user.id).select("+password");
 
-  // Check current password
   if (!(await user.matchPassword(req.body.currentPassword))) {
     return next(new ErrorResponse("Password is incorrect", 401));
   }
