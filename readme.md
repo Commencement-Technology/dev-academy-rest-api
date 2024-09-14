@@ -34,12 +34,6 @@ node seeder -d
 node seeder -i
 ```
 
-## Demo
 
-The API is live at [devcamper.io](https://devcamper.io)
+Test endpoints via this [Postman](https://martian-meteor-939359.postman.co/workspace/alitalhacoban-public-workspace~6633d43a-18bb-4f4d-84e1-94a76d318225/collection/18754010-9bb8f197-24dc-461e-ab56-d80c6a7f190f?action=share&creator=18754010) collection.
 
-Extensive documentation with examples [here](https://documenter.getpostman.com/view/8923145/SVtVVTzd?version=latest)
-
-- Version: 1.0.0
-- License: MIT
-- Author: Brad Traversy
