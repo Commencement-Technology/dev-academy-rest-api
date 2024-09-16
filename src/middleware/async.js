@@ -1,4 +1,4 @@
-const { sendErrorResponse } = require("../utils/response");
+const { sendErrorResponse } = require("../utils/responseHandler");
 const asyncHandler = (fn) => (req, res, next) =>
   Promise.resolve(fn(req, res, next)).catch((err) => {
     return sendErrorResponse(
