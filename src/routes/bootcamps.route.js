@@ -6,12 +6,12 @@ const {
   updateBootcamp,
   deleteBootcamp,
   bootcampPhotoUpload,
-} = require("../controllers/bootcamps");
+} = require("../controllers/bootcamps.controller");
 
 const Bootcamp = require("../models/Bootcamp");
 
-const courseRouter = require("./courses");
-const reviewRouter = require("./reviews");
+const courseRouter = require("./courses.route");
+const reviewRouter = require("./reviews.route");
 
 const router = express.Router();
 

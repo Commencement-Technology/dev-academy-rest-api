@@ -8,11 +8,11 @@ const rateLimit = require("express-rate-limit");
 const errorHandler = require("./middleware/error");
 
 // Route files
-const bootcamps = require("./routes/bootcamps");
-const courses = require("./routes/courses");
-const auth = require("./routes/auth");
-const users = require("./routes/users");
-const reviews = require("./routes/reviews");
+const bootcamps = require("./routes/bootcamps.route");
+const courses = require("./routes/courses.route");
+const auth = require("./routes/auth.route");
+const users = require("./routes/users.route");
+const reviews = require("./routes/reviews.route");
 
 const app = express();
 
