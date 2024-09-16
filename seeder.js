@@ -42,7 +42,7 @@ const destroyData = async () => {
     await Course.deleteMany();
     await User.deleteMany();
     await Review.deleteMany();
-    console.log("Database Cleared!");
+    console.log("Database Cleaned Up!");
     process.exit();
   } catch (err) {
     console.error(err);
