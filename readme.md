@@ -2,7 +2,17 @@
 
 The repository for “Dev Academy REST API” is a backend API for a web application managing bootcamps and courses. It includes CRUD functionality for users, bootcamps, courses and reviews.
 
-Test endpoints via this [Postman](https://martian-meteor-939359.postman.co/workspace/alitalhacoban-public-workspace~6633d43a-18bb-4f4d-84e1-94a76d318225/collection/18754010-9bb8f197-24dc-461e-ab56-d80c6a7f190f?action=share&creator=18754010) collection.
+## Endpoints
+Below is an overview of the available endpoints and their functionalities.
+- ***To view the Swagger UI schema, navigate to `http://localhost:3000/api-docs` in your browser after running the server.***
+- ***You can test these endpoints via this [Postman](https://martian-meteor-939359.postman.co/workspace/alitalhacoban-public-workspace~6633d43a-18bb-4f4d-84e1-94a76d318225/collection/18754010-9bb8f197-24dc-461e-ab56-d80c6a7f190f?action=share&creator=18754010) collection***
+
+<img width="1255" alt="auth" src="https://github.com/user-attachments/assets/1be0b082-b258-48a1-9e92-2d087af32149">
+<img width="1255" alt="bootcamps" src="https://github.com/user-attachments/assets/09b8bf7b-42a0-4083-83ea-26ea0151859c">
+<img width="1255" alt="courses" src="https://github.com/user-attachments/assets/fdebf626-ce85-45d2-9653-335aa63f5e9d">
+<img width="1255" alt="reviews" src="https://github.com/user-attachments/assets/063db466-ac7f-4bd0-8e49-d8eec0dcad11">
+<img width="1255" alt="users" src="https://github.com/user-attachments/assets/7f167e17-0b2b-4322-87f3-13b38cf5a446">
+
 
 ## Technologies Used
 
