@@ -1,10 +1,6 @@
-# DevCamper API
+# Dev Academy REST API
 
-> Backend API for DevCamper application, which is a bootcamp directory website
-
-## Usage
-
-Rename "config/config.env.env" to "config/config.env" and update the values/settings to your own
+> Backend API for Dev Academy web application, which includes bootcamps and courses.
 
 ## Install Dependencies
 
