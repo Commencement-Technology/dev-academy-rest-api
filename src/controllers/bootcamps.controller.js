@@ -6,9 +6,6 @@ const {
   sendErrorResponse,
 } = require("../utils/responseHandler");
 
-// @desc      Get all bootcamps
-// @route     GET /api/v1/bootcamps
-// @access    Public
 const getBootcamps = asyncHandler(async (req, res, next) => {
   sendSuccessResponse(
     res,
@@ -18,9 +15,6 @@ const getBootcamps = asyncHandler(async (req, res, next) => {
   );
 });
 
-// @desc      Get single bootcamp
-// @route     GET /api/v1/bootcamps/:id
-// @access    Public
 const getBootcamp = asyncHandler(async (req, res, next) => {
   const bootcamp = await Bootcamp.findById(req.params.id);
 
@@ -37,9 +31,6 @@ const getBootcamp = asyncHandler(async (req, res, next) => {
   });
 });
 
-// @desc      Create new bootcamp
-// @route     POST /api/v1/bootcamps
-// @access    Private
 const createBootcamp = asyncHandler(async (req, res, next) => {
   req.body.user = req.user.id;
 
@@ -59,9 +50,6 @@ const createBootcamp = asyncHandler(async (req, res, next) => {
   });
 });
 
-// @desc      Update bootcamp
-// @route     PUT /api/v1/bootcamps/:id
-// @access    Private
 const updateBootcamp = asyncHandler(async (req, res, next) => {
   let bootcamp = await Bootcamp.findById(req.params.id);
 
@@ -91,9 +79,6 @@ const updateBootcamp = asyncHandler(async (req, res, next) => {
   });
 });
 
-// @desc      Delete bootcamp
-// @route     DELETE /api/v1/bootcamps/:id
-// @access    Private
 const deleteBootcamp = asyncHandler(async (req, res, next) => {
   const bootcamp = await Bootcamp.findById(req.params.id);
 
@@ -117,9 +102,6 @@ const deleteBootcamp = asyncHandler(async (req, res, next) => {
   sendSuccessResponse(res, 200, "Bootcamp deleted successfully", {});
 });
 
-// @desc      Upload photo for bootcamp
-// @route     PUT /api/v1/bootcamps/:id/photo
-// @access    Private
 const bootcampPhotoUpload = asyncHandler(async (req, res, next) => {
   const bootcamp = await Bootcamp.findById(req.params.id);
 

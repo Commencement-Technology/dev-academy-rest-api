@@ -7,9 +7,6 @@ const {
   sendErrorResponse,
 } = require("../utils/responseHandler");
 
-// @desc      Register user
-// @route     POST /api/v1/auth/register
-// @access    Public
 const register = asyncHandler(async (req, res, next) => {
   const { name, email, password, role } = req.body;
 
@@ -26,9 +23,6 @@ const register = asyncHandler(async (req, res, next) => {
   sendTokenResponse(user, 200, "User registered succesfully", res);
 });
 
-// @desc      Login user
-// @route     POST /api/v1/auth/login
-// @access    Public
 const login = asyncHandler(async (req, res, next) => {
   const { email, password } = req.body;
 
@@ -51,9 +45,6 @@ const login = asyncHandler(async (req, res, next) => {
   sendTokenResponse(user, 200, "User logged in succesfully", res);
 });
 
-// @desc      Log user out / clear cookie
-// @route     GET /api/v1/auth/logout
-// @access    Private
 const logout = asyncHandler(async (req, res, next) => {
   res.cookie("token", "none", {
     expires: new Date(Date.now() + 10 * 1000),
@@ -63,9 +54,6 @@ const logout = asyncHandler(async (req, res, next) => {
   return sendSuccessResponse(res, 200, "User logged out successfully");
 });
 
-// @desc      Get current logged in user
-// @route     POST /api/v1/auth/me
-// @access    Private
 const getMe = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.user.id);
 
@@ -74,9 +62,6 @@ const getMe = asyncHandler(async (req, res, next) => {
   });
 });
 
-// @desc      Update user details
-// @route     PUT /api/v1/auth/updatedetails
-// @access    Private
 const updateDetails = asyncHandler(async (req, res, next) => {
   const fieldsToUpdate = {
     ...(req.body.name && { name: req.body.name }),
@@ -93,9 +78,6 @@ const updateDetails = asyncHandler(async (req, res, next) => {
   });
 });
 
-// @desc      Update password
-// @route     PUT /api/v1/auth/updatepassword
-// @access    Private
 const updatePassword = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.user.id).select("+password");
 
@@ -109,9 +91,6 @@ const updatePassword = asyncHandler(async (req, res, next) => {
   sendTokenResponse(user, 200, "Password updated successfully", res);
 });
 
-// @desc      Forgot password
-// @route     POST /api/v1/auth/forgotpassword
-// @access    Public
 const forgotPassword = asyncHandler(async (req, res, next) => {
   const user = await User.findOne({ email: req.body.email });
 
@@ -148,9 +127,6 @@ const forgotPassword = asyncHandler(async (req, res, next) => {
   }
 });
 
-// @desc      Reset password
-// @route     PUT /api/v1/auth/resetpassword/:resettoken
-// @access    Public
 const resetPassword = asyncHandler(async (req, res, next) => {
   const resetPasswordToken = crypto
     .createHash("sha256")

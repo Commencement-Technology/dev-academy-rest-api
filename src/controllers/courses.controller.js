@@ -6,10 +6,6 @@ const {
   sendErrorResponse,
 } = require("../utils/responseHandler");
 
-// @desc      Get courses
-// @route     GET /api/v1/courses
-// @route     GET /api/v1/bootcamps/:bootcampId/courses
-// @access    Public
 const getCourses = asyncHandler(async (req, res, next) => {
   if (req.params.bootcampId) {
     const courses = await Course.find({ bootcamp: req.params.bootcampId });
@@ -28,9 +24,6 @@ const getCourses = asyncHandler(async (req, res, next) => {
   }
 });
 
-// @desc      Get single course
-// @route     GET /api/v1/courses/:id
-// @access    Public
 const getCourse = asyncHandler(async (req, res, next) => {
   const course = await Course.findById(req.params.id).populate({
     path: "bootcamp",
@@ -50,9 +43,6 @@ const getCourse = asyncHandler(async (req, res, next) => {
   });
 });
 
-// @desc      Add course
-// @route     POST /api/v1/bootcamps/:bootcampId/courses
-// @access    Private
 const addCourse = asyncHandler(async (req, res, next) => {
   req.body.bootcamp = req.params.bootcampId;
   req.body.user = req.user.id;
@@ -67,7 +57,6 @@ const addCourse = asyncHandler(async (req, res, next) => {
     );
   }
 
-  // Make sure user is bootcamp owner
   if (bootcamp.user.toString() !== req.user.id && req.user.role !== "admin") {
     return sendErrorResponse(
       res,
@@ -81,9 +70,6 @@ const addCourse = asyncHandler(async (req, res, next) => {
   sendSuccessResponse(res, 200, "Course added successfully", { data: course });
 });
 
-// @desc      Update course
-// @route     PUT /api/v1/courses/:id
-// @access    Private
 const updateCourse = asyncHandler(async (req, res, next) => {
   let course = await Course.findById(req.params.id);
 
@@ -114,9 +100,6 @@ const updateCourse = asyncHandler(async (req, res, next) => {
   });
 });
 
-// @desc      Delete course
-// @route     DELETE /api/v1/courses/:id
-// @access    Private
 const deleteCourse = asyncHandler(async (req, res, next) => {
   const course = await Course.findById(req.params.id);
 
