@@ -39,7 +39,7 @@ Test endpoints via this [Postman](https://martian-meteor-939359.postman.co/works
 
 ## Configuration
 
-1. Creat a `.env` file on the root of the project and add the following environment variables
+1. Creat a `.env` file on the root of the project and add the following environment variables. To set up email host informations visit [Mailtrap](https://mailtrap.io/home) and create your account.
 
 ```
 NODE_ENV=development
