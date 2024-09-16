@@ -6,6 +6,7 @@ const fileupload = require("express-fileupload");
 const cookieParser = require("cookie-parser");
 const rateLimit = require("express-rate-limit");
 const errorHandler = require("./middleware/error");
+const swaggerDocs = require("../swagger");
 
 // Route files
 const bootcamps = require("./routes/bootcamps.route");
@@ -34,13 +35,10 @@ app.use("/api/v1/courses", courses);
 app.use("/api/v1/auth", auth);
 app.use("/api/v1/users", users);
 app.use("/api/v1/reviews", reviews);
-app.use((req, res) => {
-  res.status(404).json({ message: "Resource not found!" });
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
+  swaggerDocs(app, PORT);
 });
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(
-  PORT,
-  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
-);
