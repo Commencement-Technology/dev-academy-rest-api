@@ -7,6 +7,11 @@ const {
   deleteCourse,
 } = require("../controllers/courses.controller");
 
+const {
+  validateAddCourse,
+  validateUpdateCourse,
+} = require("../middleware/validators/courses.validator");
+
 const Course = require("../models/Course");
 
 const router = express.Router({ mergeParams: true });
@@ -84,7 +89,7 @@ router
     }),
     getCourses
   )
-  .post(protect, authorize("publisher", "admin"), addCourse);
+  .post(protect, authorize("publisher", "admin"), validateAddCourse, addCourse);
 
 /**
  * @swagger
@@ -163,7 +168,12 @@ router
 router
   .route("/:id")
   .get(getCourse)
-  .put(protect, authorize("publisher", "admin"), updateCourse)
+  .put(
+    protect,
+    authorize("publisher", "admin"),
+    validateUpdateCourse,
+    updateCourse
+  )
   .delete(protect, authorize("publisher", "admin"), deleteCourse);
 
 module.exports = router;
