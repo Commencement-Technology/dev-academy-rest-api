@@ -17,6 +17,7 @@ Below is an overview of the available endpoints and their functionalities.
 ## Technologies Used
 
 - ***bcryptjs:*** A library to hash passwords, providing secure encryption to protect sensitive user data.
+- ***express-validator:*** Middleware for server side input validation.
 - ***cookie-parser:*** Middleware to parse cookies in incoming HTTP requests.
 - ***dotenv:*** Loads environment variables from a .env file into process.env.
 - ***express:*** A fast, minimal web framework for building APIs and web applications.
