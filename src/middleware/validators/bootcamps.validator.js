@@ -1,14 +1,5 @@
 const { body, param } = require("express-validator");
 
-const validateBootcampId = [
-  param("id")
-    .notEmpty()
-    .withMessage("Bootcamp ID is required")
-    .bail()
-    .isMongoId()
-    .withMessage("Invalid Bootcamp ID format"),
-];
-
 const validateCreateBootcamp = [
   body("name").notEmpty().withMessage("Bootcamp name is required"),
   body("description")
@@ -73,7 +64,6 @@ const validatePhotoUpload = [
 ];
 
 module.exports = {
-  validateBootcampId,
   validateCreateBootcamp,
   validateUpdateBootcamp,
   validatePhotoUpload,

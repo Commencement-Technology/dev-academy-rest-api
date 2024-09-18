@@ -9,7 +9,6 @@ const {
 } = require("../controllers/bootcamps.controller");
 
 const {
-  validateBootcampId,
   validateCreateBootcamp,
   validateUpdateBootcamp,
   validatePhotoUpload,
@@ -189,18 +188,13 @@ router.route("/").get(advancedResults(Bootcamp, "courses"), getBootcamps).post(
  */
 router
   .route("/:id")
-  .get(validateBootcampId, getBootcamp)
+  .get(getBootcamp)
   .put(
     protect,
     authorize("publisher", "admin"),
     validateUpdateBootcamp,
     updateBootcamp
   )
-  .delete(
-    protect,
-    authorize("publisher", "admin"),
-    validateBootcampId,
-    deleteBootcamp
-  );
+  .delete(protect, authorize("publisher", "admin"), deleteBootcamp);
 
 module.exports = router;
