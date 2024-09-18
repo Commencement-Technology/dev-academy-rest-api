@@ -8,6 +8,13 @@ const {
   bootcampPhotoUpload,
 } = require("../controllers/bootcamps.controller");
 
+const {
+  validateBootcampId,
+  validateCreateBootcamp,
+  validateUpdateBootcamp,
+  validatePhotoUpload,
+} = require("../middleware/validators/bootcamps.validator");
+
 const Bootcamp = require("../models/Bootcamp");
 
 const courseRouter = require("./courses.route");
@@ -58,7 +65,12 @@ router.use("/:bootcampId/reviews", reviewRouter);
  */
 router
   .route("/:id/photo")
-  .put(protect, authorize("publisher", "admin"), bootcampPhotoUpload);
+  .put(
+    protect,
+    authorize("publisher", "admin"),
+    validatePhotoUpload,
+    bootcampPhotoUpload
+  );
 
 /**
  * @swagger
@@ -100,10 +112,12 @@ router
  *       400:
  *         description: Bad request
  */
-router
-  .route("/")
-  .get(advancedResults(Bootcamp, "courses"), getBootcamps)
-  .post(protect, authorize("publisher", "admin"), createBootcamp);
+router.route("/").get(advancedResults(Bootcamp, "courses"), getBootcamps).post(
+  protect,
+  authorize("publisher", "admin"),
+  validateCreateBootcamp, // Added validator for creating bootcamp
+  createBootcamp
+);
 
 /**
  * @swagger
@@ -175,8 +189,18 @@ router
  */
 router
   .route("/:id")
-  .get(getBootcamp)
-  .put(protect, authorize("publisher", "admin"), updateBootcamp)
-  .delete(protect, authorize("publisher", "admin"), deleteBootcamp);
+  .get(validateBootcampId, getBootcamp)
+  .put(
+    protect,
+    authorize("publisher", "admin"),
+    validateUpdateBootcamp,
+    updateBootcamp
+  )
+  .delete(
+    protect,
+    authorize("publisher", "admin"),
+    validateBootcampId,
+    deleteBootcamp
+  );
 
 module.exports = router;
