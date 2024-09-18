@@ -10,6 +10,15 @@ const {
   updatePassword,
 } = require("../controllers/auth.controller");
 
+const {
+  validateRegister,
+  validateLogin,
+  validateUpdateDetails,
+  validateUpdatePassword,
+  validateForgotPassword,
+  validateResetPassword,
+} = require("../middleware/validators/auth.validator");
+
 const router = express.Router();
 const { protect } = require("../middleware/auth");
 
@@ -46,7 +55,7 @@ const { protect } = require("../middleware/auth");
  *       400:
  *         description: Bad request, missing required fields
  */
-router.post("/register", register);
+router.post("/register", validateRegister, register);
 
 /**
  * @swagger
@@ -77,7 +86,7 @@ router.post("/register", register);
  *       401:
  *         description: Invalid credentials
  */
-router.post("/login", login);
+router.post("/login", validateLogin, login);
 
 /**
  * @swagger
@@ -133,7 +142,7 @@ router.get("/me", protect, getMe);
  *       400:
  *         description: Bad request
  */
-router.put("/updatedetails", protect, updateDetails);
+router.put("/updatedetails", validateUpdateDetails, protect, updateDetails);
 
 /**
  * @swagger
@@ -163,7 +172,7 @@ router.put("/updatedetails", protect, updateDetails);
  *       401:
  *         description: Current password is incorrect
  */
-router.put("/updatepassword", protect, updatePassword);
+router.put("/updatepassword", validateUpdatePassword, protect, updatePassword);
 
 /**
  * @swagger
@@ -189,7 +198,7 @@ router.put("/updatepassword", protect, updatePassword);
  *       404:
  *         description: No user found with that email
  */
-router.post("/forgotpassword", forgotPassword);
+router.post("/forgotpassword", validateForgotPassword, forgotPassword);
 
 /**
  * @swagger
@@ -221,6 +230,6 @@ router.post("/forgotpassword", forgotPassword);
  *       400:
  *         description: Invalid token
  */
-router.put("/resetpassword/:resettoken", resetPassword);
+router.put("/resetpassword/:resettoken", validateResetPassword, resetPassword);
 
 module.exports = router;
