@@ -7,6 +7,11 @@ const {
   deleteUser,
 } = require("../controllers/users.controller");
 
+const {
+  validateCreateUser,
+  validateUpdateUser,
+} = require("../middleware/validators/users.validator");
+
 const User = require("../models/User");
 
 const router = express.Router({ mergeParams: true });
@@ -64,7 +69,10 @@ router.use(authorize("admin"));
  *       401:
  *         description: Unauthorized
  */
-router.route("/").get(advancedResults(User), getUsers).post(createUser);
+router
+  .route("/")
+  .get(advancedResults(User), getUsers)
+  .post(validateCreateUser, createUser);
 
 /**
  * @swagger
@@ -139,6 +147,10 @@ router.route("/").get(advancedResults(User), getUsers).post(createUser);
  *       401:
  *         description: Unauthorized
  */
-router.route("/:id").get(getUser).put(updateUser).delete(deleteUser);
+router
+  .route("/:id")
+  .get(getUser)
+  .put(validateUpdateUser, updateUser)
+  .delete(deleteUser);
 
 module.exports = router;
