@@ -7,6 +7,11 @@ const {
   deleteReview,
 } = require("../controllers/reviews.controller");
 
+const {
+  validateAddReview,
+  validateUpdateReview,
+} = require("../middleware/validators/reviews.validator");
+
 const Review = require("../models/Review");
 
 const router = express.Router({ mergeParams: true });
@@ -78,7 +83,7 @@ router
     }),
     getReviews
   )
-  .post(protect, authorize("user", "admin"), addReview);
+  .post(protect, authorize("user", "admin"), validateAddReview, addReview);
 
 /**
  * @swagger
@@ -153,7 +158,7 @@ router
 router
   .route("/:id")
   .get(getReview)
-  .put(protect, authorize("user", "admin"), updateReview)
+  .put(protect, authorize("user", "admin"), validateUpdateReview, updateReview)
   .delete(protect, authorize("user", "admin"), deleteReview);
 
 module.exports = router;
