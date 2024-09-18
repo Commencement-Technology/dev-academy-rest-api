@@ -1,11 +1,11 @@
 # Dev Academy REST API
 
-The repository for “Dev Academy REST API” is a backend API for a web application managing bootcamps and courses. It includes CRUD functionality for users, bootcamps, courses and reviews.
+Node.js RESTful API project for managing educational resources in an academy. It offers full CRUD functionality for users , courses , bootcamps and reviews with Express.js for routing and MongoDB for storage.
 
 ## Endpoints
 Below is an overview of the available endpoints and their functionalities.
-- ***To view the Swagger UI schema, navigate to `http://localhost:3000/api-docs` in your browser after running the server.***
-- ***You can test these endpoints via this [Postman](https://martian-meteor-939359.postman.co/workspace/alitalhacoban-public-workspace~6633d43a-18bb-4f4d-84e1-94a76d318225/collection/18754010-9bb8f197-24dc-461e-ab56-d80c6a7f190f?action=share&creator=18754010) collection***
+- ***To explore the Swagger UI schema and view available endpoints, navigate to `http://localhost:3000/api-docs` after running the server.***
+- ***You can also test these endpoints via this [Postman](https://martian-meteor-939359.postman.co/workspace/alitalhacoban-public-workspace~6633d43a-18bb-4f4d-84e1-94a76d318225/collection/18754010-9bb8f197-24dc-461e-ab56-d80c6a7f190f?action=share&creator=18754010) collection***
 
 <img width="1255" alt="auth" src="https://github.com/user-attachments/assets/1be0b082-b258-48a1-9e92-2d087af32149">
 <img width="1255" alt="bootcamps" src="https://github.com/user-attachments/assets/09b8bf7b-42a0-4083-83ea-26ea0151859c">
@@ -14,19 +14,22 @@ Below is an overview of the available endpoints and their functionalities.
 <img width="1255" alt="users" src="https://github.com/user-attachments/assets/7f167e17-0b2b-4322-87f3-13b38cf5a446">
 
 
-## Technologies Used
+## Features
 
-- ***bcryptjs:*** A library to hash passwords, providing secure encryption to protect sensitive user data.
-- ***express-validator:*** Middleware for server side input validation.
-- ***cookie-parser:*** Middleware to parse cookies in incoming HTTP requests.
-- ***dotenv:*** Loads environment variables from a .env file into process.env.
-- ***express:*** A fast, minimal web framework for building APIs and web applications.
-- ***express-fileupload:*** Middleware for handling file uploads in Express applications.
-- ***express-rate-limit:*** Limits the number of requests to an API to prevent abuse.
-- ***jsonwebtoken:*** Implements JWT for user authentication.
-- ***mongoose:*** Provides a schema-based solution for MongoDB interactions.
-- ***nodemailer:*** Allows sending emails from your Node.js application.
-- ***slugify:*** Converts text into a URL-friendly slug format.
+ This project implements the following key features to ensure a robust, secure, and scalable web application:
+
+- `JWT-Based Authentication:` Secure user authentication using JSON Web Tokens (JWT) to manage user sessions.
+- `Password Hashing`: Secure password storage with hashing using the `bcryptjs` package.
+- `Role-Based Access Control (RBAC)`: Authorization system to manage access based on user roles, ensuring secure data handling.
+- `Password Recovery`: Full password recovery system, including both "reset password" and "forgot password" functionalities.
+- `Email Notifications`: Automated email notifications for password recovery using the `nodemailer` package.
+- `Server-Side Validation`: Input validation using the `express-validator` package to ensure data integrity and security.
+- `Advanced MongoDB Queries`: Efficient data retrieval and manipulation using the MongoDB Aggregation Framework.
+- `Pagination`: Implemented pagination for efficient result retrieval in larger datasets.
+- `Image Upload`: Secure image uploading functionality using the `express-fileupload` package.
+- `SEO-Friendly URLs`: Convert text into URL-friendly slugs using the `slugify` package.
+- `Rate Limiting`: Protect the application from abuse by implementing rate limiting using the `express-rate-limit` package.
+
 
  ## Installation
   1. Clone the repository
