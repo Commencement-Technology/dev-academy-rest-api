@@ -14,7 +14,7 @@ Below is an overview of the available endpoints and their functionalities.
 <img width="1255" alt="users" src="https://github.com/user-attachments/assets/7f167e17-0b2b-4322-87f3-13b38cf5a446">
 
 
-## Features
+## Key Features
 
  This project implements the following key features to ensure a robust, secure, and scalable web application:
 
