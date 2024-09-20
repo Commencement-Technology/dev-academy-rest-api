@@ -5,7 +5,6 @@ const express = require("express");
 const fileupload = require("express-fileupload");
 const cookieParser = require("cookie-parser");
 const rateLimit = require("express-rate-limit");
-const errorHandler = require("./middleware/error");
 const swaggerDocs = require("../swagger");
 
 // Route files
@@ -21,7 +20,6 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(fileupload());
 app.use(express.static(path.join(__dirname, "public")));
-app.use(errorHandler);
 
 const limiter = rateLimit({
   windowMs: 10 * 60 * 1000, // 10 mins
