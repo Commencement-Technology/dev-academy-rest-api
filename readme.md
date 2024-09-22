@@ -29,6 +29,7 @@ Below is an overview of the available endpoints and their functionalities.
 - `Image Upload`: Secure image uploading functionality using the `express-fileupload` package.
 - `SEO-Friendly URLs`: Convert text into URL-friendly slugs using the `slugify` package.
 - `Rate Limiting`: Protect the application from abuse by implementing rate limiting using the `express-rate-limit` package.
+- `Mongoose Hooks`: Utilized Mongoose `pre` and `post` hooks for automating tasks such as data validation and modifications before saving or retrieving documents.
 
 
  ## Installation
